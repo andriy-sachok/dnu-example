@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Navigation from './components/Navigation';
+import NewsList from './components/news/NewsList';
+import Faculties from './components/faculties/Faculties';
 
 import classes from './App.module.css';
 
 function App() {
   return (
-    <div className={classes.app}>
+    <Fragment>
       <Navigation />
-    </div>
+      <div className={classes.main}>
+        <NewsList />
+        <Faculties />
+      </div>
+    </Fragment>
   );
 }
 
