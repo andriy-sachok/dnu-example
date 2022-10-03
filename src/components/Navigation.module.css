@@ -1,8 +1,8 @@
 .navbar {
   display: flex;
   width: 100vw;
-  background-color: rgb(78, 217, 78);
-  justify-content: center;
+  background-color: #97bc62ff;
+  /* justify-content: space-evenly; */
+  padding: 0.3rem 2rem;
   margin: 0;
-  padding: 0;
 }

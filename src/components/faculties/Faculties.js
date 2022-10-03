@@ -52,8 +52,8 @@ const DUMMY_FACULTIES = [
 const Faculties = () => {
   return (
     <div className={classes.main}>
-      <h2>Faculties</h2>
-      <ul>
+      <h2 className={classes.faculties}>Faculties</h2>
+      <ul className={classes.faculty}>
         {DUMMY_FACULTIES.map((fac) => (
           <Faculty key={fac.title} title={fac.title} />
         ))}

@@ -1,16 +1,16 @@
 .main {
   width: 20%;
   height: fit-content;
-  background-color: rgb(119, 190, 190);
   margin: 0;
 }
 
-h2 {
+.faculties {
+  color: #2c5f2d;
   margin: 1rem;
   padding: 0;
 }
 
-ul {
+.faculty {
   list-style-type: none;
   margin: 1rem;
   padding: 0;
