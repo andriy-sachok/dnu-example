@@ -1,9 +1,11 @@
 .faculty {
   color: #2c5f2d;
-  margin: 0.5rem;
+  margin: 0 0.5rem;
   font-size: large;
+  border-radius: 5px;
 }
 
 .faculty:hover {
-  background-color: aqua;
+  color: rgb(236, 252, 236);
+  background-color: #97bc62ff;
 }
