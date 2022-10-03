@@ -6,7 +6,7 @@ import classes from './NewsItem.module.css';
 const NewsItem = () => {
   return (
     <div className={classes.main}>
-      <h2>Title of New</h2>
+      <h2>Title of Article</h2>
       <p>
         <LoremIpsum />
       </p>
