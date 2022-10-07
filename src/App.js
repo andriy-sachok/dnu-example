@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
 
-import Navigation from './components/Navigation';
-import NewsList from './components/news/NewsList';
-import Faculties from './components/faculties/Faculties';
+import Navigation from "./components/navigation/Navigation";
+import NewsList from "./components/news/NewsList";
+import Faculties from "./components/faculties/Faculties";
 
-import classes from './App.module.css';
+import classes from "./App.module.css";
 
 function App() {
   return (
