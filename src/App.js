@@ -1,19 +1,24 @@
 import React, { Fragment } from "react";
+import { Routes, Route } from "react-router-dom";
 
-import Navigation from "./components/navigation/Navigation";
-import NewsList from "./components/news/NewsList";
-import Faculties from "./components/faculties/Faculties";
+// import Navigation from "./components/navigation/Navigation";
 
-import classes from "./App.module.css";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import DemoNavigation from "./components/navigation/DemoNavigation";
 
 function App() {
   return (
     <Fragment>
-      <Navigation />
-      <div className={classes.main}>
-        <NewsList />
-        <Faculties />
-      </div>
+      {/* <Navigation /> */}
+      <DemoNavigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="home" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+      </Routes>
     </Fragment>
   );
 }

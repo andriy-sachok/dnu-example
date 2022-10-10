@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import { Button } from "@mui/material";
 
@@ -11,17 +12,17 @@ const Navigation = () => {
       <Button
         sx={{ color: "#2C5F2D", marginLeft: "1rem", textTransform: "none" }}
       >
-        Past and present
+        <NavLink to="/past-and-present">Past and present</NavLink>
       </Button>
       <Button
         sx={{ color: "#2C5F2D", marginLeft: "1rem", textTransform: "none" }}
       >
-        Education
+        <NavLink to="/education">Education</NavLink>
       </Button>
       <Button
         sx={{ color: "#2C5F2D", marginLeft: "1rem", textTransform: "none" }}
       >
-        Structure
+        <NavLink to="/structure">Structure</NavLink>
       </Button>
       <Button
         sx={{ color: "#2C5F2D", marginLeft: "1rem", textTransform: "none" }}
