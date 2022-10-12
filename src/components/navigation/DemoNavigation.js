@@ -63,7 +63,7 @@ const DemoNavigation = () => {
             LOGO
           </Typography> */}
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          {/* <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -100,9 +100,9 @@ const DemoNavigation = () => {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
           {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
-          <Typography
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -119,7 +119,10 @@ const DemoNavigation = () => {
             }}
           >
             LOGO
-          </Typography>
+          </Typography> */}
+          <Link to="/">
+            <img src="img/gerb_small.png" alt="logo" />
+          </Link>
           <Box
             sx={{
               flexGrow: 1,
@@ -130,7 +133,12 @@ const DemoNavigation = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  marginLeft: "1rem",
+                }}
               >
                 <Link
                   style={{
