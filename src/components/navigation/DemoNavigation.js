@@ -12,7 +12,15 @@ import MenuItem from "@mui/material/MenuItem";
 
 import { Link } from "react-router-dom";
 
-const pages = ["home", "about", "contact"];
+const pages = [
+  "Past and present",
+  "Education",
+  "Structure",
+  "Science",
+  "International cooperation",
+  "ROAD Map for foreign students",
+  "DNU`s 100th anniversary",
+];
 
 const DemoNavigation = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -26,11 +34,10 @@ const DemoNavigation = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: "#97bc62ff" }}>
       <Container
         maxWidth="xl"
         sx={{
-          backgroundColor: "#97bc62ff",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -130,8 +137,9 @@ const DemoNavigation = () => {
                     textDecoration: "none",
                     color: "#2c5f2d",
                     fontSize: "large",
+                    textTransform: "none",
                   }}
-                  to={`/${page}`}
+                  to={`/${page.replaceAll(" ", "-").toLowerCase()}`}
                 >
                   {page}
                 </Link>
