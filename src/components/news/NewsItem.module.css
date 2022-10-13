@@ -1,7 +1,7 @@
 .main {
   margin: 0.5rem 0 1rem 0;
   display: flex;
-  width: 30%;
+  width: 200px;
   flex-direction: column;
   background-color: blueviolet;
 }

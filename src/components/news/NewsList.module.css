@@ -1,4 +1,6 @@
 .main {
+  display: flex;
+  flex-direction: column;
   width: 80%;
   margin: 0;
   padding: 0;
@@ -9,8 +11,11 @@
 }
 
 .news {
+}
+
+.newsContainer {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-wrap: wrap; 
+  justify-content: space-around;
 }
