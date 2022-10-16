@@ -13,6 +13,7 @@ import RoadMap from "./pages/secondary pages/RoadMap";
 import Anniversary from "./pages/secondary pages/Anniversary";
 
 import DemoNavigation from "./components/navigation/DemoNavigation";
+import Contacts from "./components/Contacts";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="road-map-for-foreign-students" element={<RoadMap />} />
         <Route path="dnu`s-100th-anniversary" element={<Anniversary />} />
       </Routes>
+      <Contacts />
     </Fragment>
   );
 }
