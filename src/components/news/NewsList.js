@@ -36,7 +36,7 @@ const NewsList = () => {
   return (
     <div className={classes.main}>
       <h1 className={classes.title}>News | All news</h1>
-      <div className={classes.news}>
+      <div>
         <div className={classes.newsContainer}>
           {DUMMY_NEWS.map((el) => (
             <NewsItem key={el.title} title={el.title} text={el.text} />

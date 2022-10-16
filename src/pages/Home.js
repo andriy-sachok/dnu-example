@@ -7,7 +7,9 @@ import classes from "./Home.module.css";
 const Home = () => {
   return (
     <div className={classes.main}>
-      <NewsList />
+      <div className={classes.news}>
+        <NewsList />
+      </div>
       <Faculties />
     </div>
   );
