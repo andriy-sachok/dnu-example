@@ -1,0 +1,10 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    /* background-color: aquamarine; */
+    padding: 2rem;
+}
+
+.title {
+    text-align: center;
+}
