@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Stack } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
@@ -13,6 +14,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 const buttonStyles = { fontSize: "60px" };
 
 const Contacts = () => {
+  const navigate = useNavigate();
+
   return (
     <Stack
       direction="row"
