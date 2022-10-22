@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import LoremIpsum from "react-lorem-ipsum";
 
 import AnnouncementsItem from "./AnnouncementsItem";
@@ -33,7 +33,29 @@ const DUMMY_ANNOUNCEMENTS = [
   },
 ];
 
+// https://dnu-news-default-rtdb.europe-west1.firebasedatabase.app/
+
 const AnnouncementsList = () => {
+  const announcements = [];
+
+  const fetchAnnouncements = async () => {
+    let response = await fetch(
+      "https://dnu-news-default-rtdb.europe-west1.firebasedatabase.app/announcements.json"
+    );
+
+    let data = await response.json();
+
+    for (let element in data) {
+      announcements.push(data[element]);
+    }
+
+    console.log(announcements);
+  };
+
+  useEffect(() => {
+    fetchAnnouncements();
+  }, [announcements, fetchAnnouncements]);
+
   return (
     <div className={classes.main}>
       <h1 className={classes.title}>Announcements | All announcements</h1>
