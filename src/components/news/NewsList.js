@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Loading from "../UI/Loading";
+import ErrorComponent from "../UI/ErrorComponent";
 import NewsItem from "./NewsItem";
 
 import classes from "./NewsList.module.css";
@@ -21,17 +22,22 @@ const NewsList = () => {
     if (!response.ok) {
       setIsLoading(false);
       setError(true);
-      throw new Error();
+      throw new Error(`Error! Can't get data from database.`);
     }
 
-    setIsLoading(false);
     const data = await response.json();
+
+    setIsLoading(false);
 
     setNews(Object.entries(data));
   };
 
   useEffect(() => {
-    fetchNews();
+    try {
+      fetchNews();
+    } catch (e) {
+      // errorText = e.message;
+    }
   }, []);
 
   let content = (
@@ -48,7 +54,7 @@ const NewsList = () => {
     <div className={classes.main}>
       <h1 className={classes.title}>News | All news</h1>
       <div>
-        {error && <h2 style={{ textAlign: "center", color: "red" }}>Error!</h2>}
+        {error && <ErrorComponent />}
         {isLoading ? <Loading /> : content}
       </div>
     </div>
