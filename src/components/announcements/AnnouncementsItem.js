@@ -21,7 +21,7 @@ const AnnouncementsItem = (props) => {
             color="text.secondary"
             sx={{
               whiteSpace: "nowrap",
-              width: "35%",
+              width: "100%",
               overflow: "hidden",
               textOverflow: "ellipsis",
             }}
