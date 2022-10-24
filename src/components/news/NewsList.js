@@ -25,9 +25,15 @@ const NewsList = () => {
       <h1 className={classes.title}>News | All news</h1>
       <div>
         <div className={classes.newsContainer}>
-          {news.map((el) => (
-            <NewsItem key={el[1].title} title={el[1].title} text={el[1].text} />
-          ))}
+          {news
+            .sort((a, b) => a[1].title.localeCompare(b[1].title))
+            .map((el) => (
+              <NewsItem
+                key={el[1].title}
+                title={el[1].title}
+                text={el[1].text}
+              />
+            ))}
         </div>
       </div>
     </div>

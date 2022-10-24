@@ -26,13 +26,15 @@ const AnnouncementsList = () => {
     <div className={classes.main}>
       <h1 className={classes.title}>Announcements | All announcements</h1>
       <div>
-        {announcements.map((element) => (
-          <AnnouncementsItem
-            key={element[1].title}
-            title={element[1].title}
-            text={element[1].text}
-          />
-        ))}
+        {announcements
+          .sort((a, b) => a[1].title.localeCompare(b[1].title))
+          .map((element) => (
+            <AnnouncementsItem
+              key={element[1].title}
+              title={element[1].title}
+              text={element[1].text}
+            />
+          ))}
       </div>
     </div>
   );
