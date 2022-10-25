@@ -13,31 +13,29 @@ const NewsList = () => {
 
   const fetchNews = async () => {
     setIsLoading(true);
-    setError(false);
 
-    const response = await fetch(
-      "https://dnu-news-default-rtdb.europe-west1.firebasedatabase.app/news.json"
-    );
+    try {
+      const response = await fetch(
+        "https://dnu-news-default-rtdb.europe-west1.firebasedatabase.app/news.json"
+      );
 
-    if (!response.ok) {
+      if (!response.ok) {
+        setIsLoading(false);
+        throw new Error(`Error! Can't get data from database.`);
+      }
+
+      const data = await response.json();
+
       setIsLoading(false);
-      setError(true);
-      throw new Error(`Error! Can't get data from database.`);
+
+      setNews(Object.entries(data));
+    } catch (e) {
+      setError(e.message);
     }
-
-    const data = await response.json();
-
-    setIsLoading(false);
-
-    setNews(Object.entries(data));
   };
 
   useEffect(() => {
-    try {
-      fetchNews();
-    } catch (e) {
-      // errorText = e.message;
-    }
+    fetchNews();
   }, []);
 
   let content = (
@@ -54,7 +52,7 @@ const NewsList = () => {
     <div className={classes.main}>
       <h1 className={classes.title}>News | All news</h1>
       <div>
-        {error && <ErrorComponent />}
+        {error && <ErrorComponent text={error} />}
         {isLoading ? <Loading /> : content}
       </div>
     </div>
