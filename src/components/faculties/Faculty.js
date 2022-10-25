@@ -7,6 +7,7 @@ const Faculty = (props) => {
   return (
     <li className={classes.faculty}>
       <Button
+        onClick={() => alert(`Redirect to "${props.title}" page.`)}
         sx={{
           color: "#2C5F2D",
           textAlign: "start",

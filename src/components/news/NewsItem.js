@@ -21,7 +21,7 @@ const NewsItem = (props) => {
   return (
     <Card
       sx={{
-        width: "400px",
+        width: "350px",
         display: "flex",
         flexDirection: "column",
         marginTop: "2rem",
