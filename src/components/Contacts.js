@@ -27,25 +27,28 @@ const Contacts = () => {
       // backgroundColor="#fff"
     >
       <Tooltip title="Facebook">
-        <IconButton aria-label="facebook">
+        <IconButton aria-label="facebook" onClick={() => navigate("facebook")}>
           <FacebookIcon sx={buttonStyles} />
         </IconButton>
       </Tooltip>
 
       <Tooltip title="YouTube">
-        <IconButton aria-label="youtube">
+        <IconButton aria-label="youtube" onClick={() => navigate("youtube")}>
           <YouTubeIcon sx={buttonStyles} />
         </IconButton>
       </Tooltip>
 
       <Tooltip title="Instagram">
-        <IconButton aria-label="instagram">
+        <IconButton
+          aria-label="instagram"
+          onClick={() => navigate("instagram")}
+        >
           <InstagramIcon sx={buttonStyles} />
         </IconButton>
       </Tooltip>
 
       <Tooltip title="GitHub">
-        <IconButton aria-label="github">
+        <IconButton aria-label="github" onClick={() => navigate("github")}>
           <GitHubIcon sx={buttonStyles} />
         </IconButton>
       </Tooltip>
